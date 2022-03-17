@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Koderzy</title>
+	<style>
+		button.hide {
+			display: none;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>Koderzy</h1>
+	<h2>Poprawne odpowiedzi: <span id="good-answers">0</span></h2>
+
+	<div id="game-board">
+		<div id="tip"></div>
+		<button id="phone-a-friend">Telefon do przyjaciela</button>
+		<button id="fifty-fifty">Pół na pół</button>
+		<button id="ask-the-audience">Pytanie do publiczności</button>
+		<div id="question"></div>
+		<button data-option="answer"></button>
+		<button data-option="answer"></button>
+		<button data-option="answer"></button>
+		<button data-option="answer"></button>
+	</div>
+
+	<script src="scripts.js"></script>
+</body>
+
+</html>
