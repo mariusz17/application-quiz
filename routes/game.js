@@ -150,6 +150,7 @@ function gameRoutes(app) {
 				vote,
 			});
 		});
+		console.log(test);
 		res.json(JSON.stringify(answersVoted));
 	});
 }
