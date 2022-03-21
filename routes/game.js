@@ -137,10 +137,10 @@ function gameRoutes(app) {
 				vote = voteLeft;
 			} else {
 				if (index === question.correctAnswer) {
-					vote = Math.floor(Math.random() * 70 + 25);
+					vote = ~~(Math.random() * 70 + 25);
 					vote = vote > voteLeft ? voteLeft : vote;
 				} else {
-					vote = Math.floor(Math.random() * 25);
+					vote = ~~(Math.random() * 35);
 					vote = vote > voteLeft ? voteLeft : vote;
 				}
 				voteLeft -= vote;
