@@ -1,5 +1,5 @@
 const questionDiv = document.querySelector("#question");
-const answers = document.querySelectorAll("[data-option = answer]");
+const answerButtons = document.querySelectorAll("[data-option = answer]");
 const goodAnswersSpan = document.querySelector("#good-answers");
 const gameBoard = document.querySelector("#game-board");
 const h2 = document.querySelector("h2");
@@ -11,7 +11,7 @@ const tipDiv = document.querySelector("#tip");
 phoneAFriendButton.addEventListener("click", phoneAFriend);
 fiftyFiftyButton.addEventListener("click", fiftyFifty);
 askTheAudienceButton.addEventListener("click", askTheAudience);
-answers.forEach((answer, index) => {
+answerButtons.forEach((answer, index) => {
 	answer.addEventListener("click", () => sendAnswer(index));
 });
 
@@ -31,8 +31,8 @@ function handleFiftyFiftyFeedback(data) {
 		tipDiv.textContent = data.text;
 		return;
 	}
-	answers[data.hideAnswerIndex1].classList.add("hide");
-	answers[data.hideAnswerIndex2].classList.add("hide");
+	answerButtons[data.hideAnswerIndex1].classList.add("hide");
+	answerButtons[data.hideAnswerIndex2].classList.add("hide");
 }
 
 function handleAskTheAudienceFeedback(data) {
@@ -66,10 +66,10 @@ function fillQuestionElements(data) {
 		gameBoard.style.display = "none";
 	} else {
 		questionDiv.textContent = data.question;
-		answers.forEach((answer, index) => {
+		answerButtons.forEach((answer, index) => {
 			answer.textContent = data.answers[index];
 		});
-		answers.forEach((answer) => answer.classList.remove("hide"));
+		answerButtons.forEach((answer) => answer.classList.remove("hide"));
 		tipDiv.innerHTML = "";
 	}
 }

@@ -153,3 +153,5 @@ function gameRoutes(app) {
 		res.json(JSON.stringify(answersVoted));
 	});
 }
+
+export default gameRoutes;
